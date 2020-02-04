@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 				corners: feature['geometry']['coordinates'][0].map(pair => pair.reverse()),
 			};
 		});
-		var states = [], types = ['bundle', '50k', '25k'];
+		var states = [], types = ['bundle', '50k', '40k', '25k'];
 		var bounds = L.latLngBounds(sheets[0].corners);
 		sheets.forEach(sheet => {
 			sheet.corners.forEach(point => bounds.extend(point));
@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
 		sheets.forEach(sheet => {
 			var weight = sheet.type === 'bundle' ? 2 : 1;
 			L.polygon(sheet.corners, {
-				color: sheet.type === '25k' ? '#FF0000' : sheet.type === '50k' ? '#0000FF' : '#000000',
+				color: sheet.type === '25k' ? '#FF0000' : sheet.type === '40k' ? '#800080' : sheet.type === '50k' ? '#0000FF' : '#000000',
 				weight: weight,
 				opacity: 0.8,
 				fillOpacity: 0.05,

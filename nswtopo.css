@@ -46,6 +46,9 @@ html, body {
 #toggles #show-25k.selected::after {
   color: red;
 }
+#toggles #show-40k.selected::after {
+  color: purple;
+}
 #toggles #show-50k.selected::after {
   color: blue;
 }

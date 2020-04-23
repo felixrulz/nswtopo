@@ -18,12 +18,9 @@ window.addEventListener('load', function() {
 			if (states.indexOf(sheet.state) < 0)
 				states.push(sheet.state);
 		});
-		var map = L.mapbox.map('map', 'mapbox.outdoors', {
-			accessToken: 'pk.eyJ1IjoibWhvbGxpbmciLCJhIjoiY2pncms3d3plMDY3ODJ2bnh0YWdydTBwYyJ9.RdmqeL6b_5m8Q-SzQdbXuQ',
-			minZoom: 5,
-			maxZoom: 14,
-			maxBounds: bounds.pad(0.2),
-		}).fitBounds(bounds);
+		L.mapbox.accessToken = 'pk.eyJ1IjoibWhvbGxpbmciLCJhIjoiY2pncms3d3plMDY3ODJ2bnh0YWdydTBwYyJ9.RdmqeL6b_5m8Q-SzQdbXuQ';
+		var layer = L.mapbox.styleLayer('mapbox://styles/mholling/ck9bz5uth02671imzx2s7jujc');
+		var map = L.mapbox.map('map').fitBounds(bounds).setMaxBounds(bounds.pad(0.2)).addLayer(layer);
 		types.forEach(type => states.forEach(state => map.createPane(type + ',' + state)));
 		states = states.filter(state => !state.includes(','));
 		types.concat(states).forEach(type => {

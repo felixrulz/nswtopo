@@ -39,7 +39,7 @@ $ gdalinfo --version
 Each program should return version information if it's installed correctly.
 
 ## Windows
-  * A complete Ruby installation for Windows can be [downloaded here](https://rubyinstaller.org) (be sure to select `Add Ruby executables to your PATH` when installing).
+  * A complete Ruby installation for Windows can be [downloaded here](https://rubyinstaller.org) (be sure to select `Add Ruby executables to your PATH` when installing). Note that you should install Ruby v2.5, the script won't run correctly with the most recent version.
   * Download a pre-built [ImageMagick binary](https://imagemagick.org/script/download.php#windows) for Windows. Be sure to select `add application directory to your system path` and `install legacy utilities` when installing.
   * Install the GDAL utilities using the [OSGeo4W](https://trac.osgeo.org/osgeo4w) installer. Use the `advanced install` option as only the GDAL package is required. When presented with the package list, select `All -> Uninstall` to deselect everything, then open `Commandline Utilites` and choose `Install` for the GDAL package. (Accept the required dependencies on the following page.)
   Make GDAL available on the command line with the following:

@@ -52,6 +52,10 @@ Each program should return version information if it's installed correctly.
   * If you want to create KMZ maps, install [7-Zip](https://www.7-zip.org) and add its location to your PATH:
     ```sh
     setx PATH "%PATH%;C:\Program Files\7-Zip"
+    
+  *  OR 
+    set PATH=%PATH%;C:\Program Files\7-Zip\
+
     ```
 
     **Note**: When using the Windows Command Prompt, I strongly recommend disabling *QuickEdit* mode in the *Properties* window to avoid frustration.

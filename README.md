@@ -53,7 +53,9 @@ Each program should return version information if it's installed correctly.
     ```sh
     setx PATH "%PATH%;C:\Program Files\7-Zip"
     ```
+    
   OR 
+  
     ```sh
     set PATH=%PATH%;C:\Program Files\7-Zip\
     ```
